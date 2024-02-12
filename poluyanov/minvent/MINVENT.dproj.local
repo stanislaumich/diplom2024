@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899.12.30 00:00:00.000.372,S:\_programming\Unit1.pas=S:\MINVENT\UMain.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.794,=S:\_programming\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.372,S:\_programming\Unit1.dfm=S:\MINVENT\UMain.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.901,S:\MINVENT\Unit1.dfm=S:\MINVENT\DM.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.698,S:\_programming\Project1.dproj=S:\MINVENT\MINVENT.dproj</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.901,S:\MINVENT\Unit1.pas=S:\MINVENT\DM.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.372,S:\MINVENT\UMain.pas=S:\_programming\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.901,S:\MINVENT\DM.pas=S:\MINVENT\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.698,S:\MINVENT\MINVENT.dproj=S:\_programming\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.372,S:\MINVENT\UMain.dfm=S:\_programming\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.901,S:\MINVENT\DM.dfm=S:\MINVENT\Unit1.dfm</Transaction>
     <Transaction>1899.12.30 00:00:00.000.490,=S:\MINVENT\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.794,=S:\_programming\Unit1.pas</Transaction>
   </Transactions>
 </BorlandProject>
