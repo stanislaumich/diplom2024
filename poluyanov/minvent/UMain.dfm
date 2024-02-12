@@ -22,6 +22,8 @@ object FMain: TFMain
     ActivePage = TabSheet7
     Align = alClient
     TabOrder = 0
+    ExplicitWidth = 856
+    ExplicitHeight = 434
     object TabSheet1: TTabSheet
       Caption = #1054#1088#1075#1072#1085#1080#1079#1072#1094#1080#1080
       object Label1: TLabel
@@ -120,6 +122,7 @@ object FMain: TFMain
         Height = 25
         Caption = #1059#1076#1072#1083#1080#1090#1100
         TabOrder = 5
+        OnClick = Button2Click
       end
       object Button3: TButton
         Left = 427
@@ -132,7 +135,7 @@ object FMain: TFMain
       end
     end
     object TabSheet2: TTabSheet
-      Caption = #1054#1090#1076#1077#1083#1099
+      Caption = #1057#1083#1091#1078#1073#1099
       ImageIndex = 1
       DesignSize = (
         852
@@ -314,7 +317,7 @@ object FMain: TFMain
       end
       object DBGrid8: TDBGrid
         Left = 475
-        Top = 0
+        Top = -2
         Width = 321
         Height = 120
         DataSource = DataModule1.DataSource2
@@ -328,7 +331,7 @@ object FMain: TFMain
           item
             Expanded = False
             FieldName = 'name'
-            Title.Caption = #1053#1072#1079#1074#1072#1085#1080#1077
+            Title.Caption = #1053#1072#1079#1074#1072#1085#1080#1077' '#1089#1083#1091#1078#1073#1099
             Width = 200
             Visible = True
           end>
@@ -490,8 +493,8 @@ object FMain: TFMain
         Caption = #1096#1090'.'
       end
       object Label23: TLabel
-        Left = 252
-        Top = 172
+        Left = 251
+        Top = 196
         Width = 157
         Height = 13
         Caption = #1054#1073#1086#1088#1091#1076#1086#1074#1072#1085#1080#1077' '#1091' '#1089#1086#1090#1088#1091#1076#1085#1080#1082#1086#1074':'
@@ -509,6 +512,20 @@ object FMain: TFMain
         Width = 18
         Height = 13
         Caption = #1096#1090'.'
+      end
+      object Label27: TLabel
+        Left = 255
+        Top = 163
+        Width = 116
+        Height = 13
+        Caption = #1057#1087#1080#1089#1072#1090#1100' '#1074' '#1082#1086#1083#1080#1095#1077#1089#1090#1074#1077' '
+      end
+      object Label28: TLabel
+        Left = 432
+        Top = 164
+        Width = 37
+        Height = 13
+        Caption = #1045#1076#1080#1085#1080#1094
       end
       object DBGrid4: TDBGrid
         Left = 0
@@ -633,9 +650,9 @@ object FMain: TFMain
       end
       object DBGrid12: TDBGrid
         Left = 251
-        Top = 196
+        Top = 220
         Width = 570
-        Height = 153
+        Height = 129
         DataSource = DataModule1.DListS
         TabOrder = 8
         TitleFont.Charset = DEFAULT_CHARSET
@@ -700,6 +717,23 @@ object FMain: TFMain
         Width = 200
         Height = 21
         TabOrder = 12
+      end
+      object Edit13: TEdit
+        Left = 380
+        Top = 160
+        Width = 45
+        Height = 21
+        TabOrder = 13
+        Text = '0'
+      end
+      object Button22: TButton
+        Left = 474
+        Top = 160
+        Width = 75
+        Height = 21
+        Caption = #1057#1087#1080#1089#1072#1090#1100
+        TabOrder = 14
+        OnClick = Button22Click
       end
     end
     object TabSheet5: TTabSheet
@@ -768,7 +802,6 @@ object FMain: TFMain
         Width = 371
         Height = 21
         TabOrder = 1
-        Text = 'Edit6'
       end
       object Edit7: TEdit
         Left = 92
@@ -776,7 +809,6 @@ object FMain: TFMain
         Width = 121
         Height = 21
         TabOrder = 2
-        Text = 'Edit7'
       end
       object Edit8: TEdit
         Left = 92
@@ -784,7 +816,6 @@ object FMain: TFMain
         Width = 121
         Height = 21
         TabOrder = 3
-        Text = 'Edit8'
       end
       object Button8: TButton
         Left = 220
@@ -906,6 +937,27 @@ object FMain: TFMain
     object TabSheet7: TTabSheet
       Caption = #1054#1090#1095#1077#1090#1099
       ImageIndex = 6
+      object Label29: TLabel
+        Left = 544
+        Top = 8
+        Width = 110
+        Height = 13
+        Caption = #1054#1090#1095#1077#1090' '#1087#1086' '#1089#1086#1090#1088#1091#1076#1085#1080#1082#1091
+      end
+      object Label30: TLabel
+        Left = 544
+        Top = 88
+        Width = 86
+        Height = 13
+        Caption = #1054#1090#1095#1077#1090' '#1087#1086' '#1089#1082#1083#1072#1076#1091
+      end
+      object Label31: TLabel
+        Left = 548
+        Top = 164
+        Width = 104
+        Height = 13
+        Caption = #1054#1090#1095#1077#1090' '#1087#1086' '#1084#1072#1090#1077#1088#1080#1072#1083#1091
+      end
       object GroupBox2: TGroupBox
         Left = 0
         Top = 0
@@ -976,6 +1028,54 @@ object FMain: TFMain
           OnClick = Button21Click
         end
       end
+      object ComboBox6: TComboBox
+        Left = 544
+        Top = 27
+        Width = 305
+        Height = 21
+        TabOrder = 1
+      end
+      object Button23: TButton
+        Left = 752
+        Top = 52
+        Width = 91
+        Height = 25
+        Caption = #1057#1092#1086#1088#1084#1080#1088#1086#1074#1072#1090#1100
+        TabOrder = 2
+        OnClick = Button23Click
+      end
+      object ComboBox7: TComboBox
+        Left = 544
+        Top = 104
+        Width = 305
+        Height = 21
+        TabOrder = 3
+      end
+      object Button24: TButton
+        Left = 752
+        Top = 132
+        Width = 91
+        Height = 25
+        Caption = #1057#1092#1086#1088#1084#1080#1088#1086#1074#1072#1090#1100
+        TabOrder = 4
+        OnClick = Button24Click
+      end
+      object ComboBox8: TComboBox
+        Left = 544
+        Top = 183
+        Width = 305
+        Height = 21
+        TabOrder = 5
+      end
+      object Button25: TButton
+        Left = 752
+        Top = 210
+        Width = 91
+        Height = 25
+        Caption = #1057#1092#1086#1088#1084#1080#1088#1086#1074#1072#1090#1100
+        TabOrder = 6
+        OnClick = Button25Click
+      end
     end
   end
   object StatusBar1: TStatusBar
@@ -1026,7 +1126,7 @@ object FMain: TFMain
     Top = 4
   end
   object SaveDialog1: TSaveDialog
-    Left = 808
-    Top = 60
+    Left = 740
+    Top = 4
   end
 end

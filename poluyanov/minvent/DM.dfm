@@ -6,8 +6,7 @@ object DataModule1: TDataModule1
       'DriverID=SQLite'
       'Database=S:\MINVENT\minvent.sqlite'
       'LockingMode=Normal')
-    ConnectedStoredUsage = [auDesignTime]
-    Connected = True
+    ConnectedStoredUsage = []
     LoginPrompt = False
     Left = 8
     Top = 8
@@ -48,7 +47,6 @@ object DataModule1: TDataModule1
     Top = 252
   end
   object FDTable1: TFDTable
-    Active = True
     IndexFieldNames = 'id'
     Connection = FDC
     ResourceOptions.AssignedValues = [rvEscapeExpand]
@@ -57,7 +55,6 @@ object DataModule1: TDataModule1
     Top = 4
   end
   object FDTable2: TFDTable
-    Active = True
     IndexFieldNames = 'idorg'
     MasterSource = DataSource1
     MasterFields = 'id'
@@ -68,7 +65,6 @@ object DataModule1: TDataModule1
     Top = 56
   end
   object FDTable3: TFDTable
-    Active = True
     IndexFieldNames = 'idotdel'
     MasterSource = DataSource2
     MasterFields = 'id'
@@ -82,7 +78,6 @@ object DataModule1: TDataModule1
     Top = 100
   end
   object FDTable4: TFDTable
-    Active = True
     AfterPost = FDTable4AfterPost
     IndexFieldNames = 'id'
     Connection = FDC
@@ -92,7 +87,6 @@ object DataModule1: TDataModule1
     Top = 148
   end
   object FDTable5: TFDTable
-    Active = True
     IndexFieldNames = 'id'
     Connection = FDC
     ResourceOptions.AssignedValues = [rvEscapeExpand]
@@ -101,7 +95,6 @@ object DataModule1: TDataModule1
     Top = 196
   end
   object FDTable6: TFDTable
-    Active = True
     IndexFieldNames = 'id'
     Connection = FDC
     ResourceOptions.AssignedValues = [rvEscapeExpand]
@@ -151,5 +144,10 @@ object DataModule1: TDataModule1
     DataSet = QRep
     Left = 444
     Top = 72
+  end
+  object QDel: TFDQuery
+    Connection = FDC
+    Left = 476
+    Top = 240
   end
 end

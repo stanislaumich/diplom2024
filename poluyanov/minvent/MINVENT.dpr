@@ -10,8 +10,8 @@ uses
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TFMain, FMain);
   Application.CreateForm(TDataModule1, DataModule1);
+  Application.CreateForm(TFMain, FMain);
   Application.Run;
 
 end.

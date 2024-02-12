@@ -36,6 +36,7 @@ type
     DListS: TDataSource;
     QRep: TFDQuery;
     DSrep: TDataSource;
+    QDel: TFDQuery;
     procedure FDTable4AfterPost(DataSet: TDataSet);
   private
     { Private declarations }
