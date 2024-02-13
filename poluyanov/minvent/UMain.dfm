@@ -10,9 +10,11 @@ object FMain: TFMain
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
+  OldCreateOrder = True
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
+  PixelsPerInch = 96
   TextHeight = 13
   object PageControl1: TPageControl
     Left = 0
@@ -22,8 +24,6 @@ object FMain: TFMain
     ActivePage = TabSheet7
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 856
-    ExplicitHeight = 434
     object TabSheet1: TTabSheet
       Caption = #1054#1088#1075#1072#1085#1080#1079#1072#1094#1080#1080
       object Label1: TLabel
@@ -1076,6 +1076,20 @@ object FMain: TFMain
         TabOrder = 6
         OnClick = Button25Click
       end
+      object DBGrid14: TDBGrid
+        Left = 544
+        Top = 244
+        Width = 305
+        Height = 153
+        DataSource = DataModule1.DSrep
+        TabOrder = 7
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'Tahoma'
+        TitleFont.Style = []
+        Visible = False
+      end
     end
   end
   object StatusBar1: TStatusBar
@@ -1084,8 +1098,6 @@ object FMain: TFMain
     Width = 860
     Height = 19
     Panels = <>
-    ExplicitTop = 475
-    ExplicitWidth = 856
   end
   object Panel1: TPanel
     Left = 0
@@ -1094,7 +1106,6 @@ object FMain: TFMain
     Height = 41
     Align = alTop
     TabOrder = 2
-    ExplicitWidth = 856
     object Button7: TButton
       Left = 8
       Top = 8

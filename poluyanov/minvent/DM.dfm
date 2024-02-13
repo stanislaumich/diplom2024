@@ -1,4 +1,5 @@
 object DataModule1: TDataModule1
+  OldCreateOrder = True
   Height = 641
   Width = 762
   object FDC: TFDConnection
@@ -137,7 +138,7 @@ object DataModule1: TDataModule1
   end
   object QRep: TFDQuery
     Connection = FDC
-    Left = 400
+    Left = 396
     Top = 72
   end
   object DSrep: TDataSource
@@ -147,7 +148,7 @@ object DataModule1: TDataModule1
   end
   object QDel: TFDQuery
     Connection = FDC
-    Left = 476
-    Top = 240
+    Left = 444
+    Top = 12
   end
 end

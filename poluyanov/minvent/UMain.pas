@@ -132,6 +132,7 @@ type
     Label31: TLabel;
     ComboBox8: TComboBox;
     Button25: TButton;
+    DBGrid14: TDBGrid;
                 procedure DBGrid1CellClick(Column: TColumn);
                 procedure Button1Click(Sender: TObject);
                 procedure Button3Click(Sender: TObject);
@@ -172,7 +173,7 @@ type
 
 var
         FMain: TFMain;
-
+        mydir:string;
 implementation
 
 {$R *.dfm}
@@ -574,29 +575,38 @@ procedure TFMain.Button23Click(Sender: TObject);
 var
         XL, xlw: Variant;
         templatedir, SQL, s: string;
-        i, j: integer;
+        i, j,r,c: integer;
 begin
-        if DBGrid13.DataSource.DataSet.Active then
+r:=5;
+c:=2;
+sql:='select o.name,o.dtend,c.num from people p, oborud o, place c ';
+sql:=sql+'WHERE c.idpers=p.id and c.tip=1 and o.id=c.idoborud and p.name='+Quotedstr(ComboBox6.Text);
+DataModule1.QRep.SQL.Clear;
+DataModule1.QRep.Close;
+        DataModule1.QRep.SQL.Add(sql);
+        DataModule1.QRep.Open();
+        if DBGrid14.DataSource.DataSet.Active then
         begin
                 XL := CreateOLEObject('Excel.Application');
                 XL.DisplayAlerts := False;
                 XL.Visible := true;
-                XL.WorkBooks.Add;
-                //XL.WorkBooks.Open(MyDir + '\akt.xls');
+                //XL.WorkBooks.Add;
+                XL.WorkBooks.Open(MyDir + 'pers.xlsx');
+                XL.Visible := true;
                 //xlw := XL.Workbooks.Add(extractfilepath(paramstr(0)) +
                 //  'tpl.xlsx');
                 // https://delphisources.ru/pages/faq/base/excel_work.html
-                for I := 0 to dbgrid13.DataSource.DataSet.RecordCount-1 do
+                for I := 0 to dbgrid14.DataSource.DataSet.RecordCount-1 do
                  begin
-                  for j := 0 to dbgrid13.DataSource.DataSet.FieldCount-1 do
+                  for j := 0 to dbgrid14.DataSource.DataSet.FieldCount-1 do
                    begin
-                    XL.Workbooks[1].WorkSheets[1].Cells[i+1, j+1] := dbgrid13.DataSource.DataSet.Fields[j].AsString;
+                    XL.Workbooks[1].WorkSheets[1].Cells[i+r, j+c] := dbgrid14.DataSource.DataSet.Fields[j].AsString;
 
                    end;
-                   dbgrid13.DataSource.DataSet.Next;
+                   dbgrid14.DataSource.DataSet.Next;
                  end;
                 // XL.ActiveWorkbook.SaveAs(tmpdir+'\print'+parsedatetime('%D.%M.%Y-%H-%T-%S')+'.xls');
-                XL.Visible := true;
+
                 // XL.worksheets.Printout;
                 //XL.Quit;
                 //XL := Unassigned;
@@ -610,72 +620,92 @@ procedure TFMain.Button24Click(Sender: TObject);
 var
         XL, xlw: Variant;
         templatedir, SQL, s: string;
-        i, j: integer;
+        i, j,r,c: integer;
 begin
-        if DBGrid13.DataSource.DataSet.Active then
+r:=5;
+c:=2;
+sql:='select o.name,o.dtend,c.num from sklad p, oborud o, place c ';
+sql:=sql+'WHERE c.idpers=p.id and c.tip=0 and o.id=c.idoborud and p.name='+Quotedstr(ComboBox7.Text);
+DataModule1.QRep.SQL.Clear;
+DataModule1.QRep.Close;
+        DataModule1.QRep.SQL.Add(sql);
+        DataModule1.QRep.Open();
+        if DBGrid14.DataSource.DataSet.Active then
         begin
                 XL := CreateOLEObject('Excel.Application');
                 XL.DisplayAlerts := False;
                 XL.Visible := true;
-                XL.WorkBooks.Add;
-                //XL.WorkBooks.Open(MyDir + '\akt.xls');
+                //XL.WorkBooks.Add;
+                XL.WorkBooks.Open(MyDir + 'sklad.xlsx');
+                XL.Visible := true;
                 //xlw := XL.Workbooks.Add(extractfilepath(paramstr(0)) +
                 //  'tpl.xlsx');
                 // https://delphisources.ru/pages/faq/base/excel_work.html
-                for I := 0 to dbgrid13.DataSource.DataSet.RecordCount-1 do
+                for I := 0 to dbgrid14.DataSource.DataSet.RecordCount-1 do
                  begin
-                  for j := 0 to dbgrid13.DataSource.DataSet.FieldCount-1 do
+                  for j := 0 to dbgrid14.DataSource.DataSet.FieldCount-1 do
                    begin
-                    XL.Workbooks[1].WorkSheets[1].Cells[i+1, j+1] := dbgrid13.DataSource.DataSet.Fields[j].AsString;
+                    XL.Workbooks[1].WorkSheets[1].Cells[i+r, j+c] := dbgrid14.DataSource.DataSet.Fields[j].AsString;
 
                    end;
-                   dbgrid13.DataSource.DataSet.Next;
+                   dbgrid14.DataSource.DataSet.Next;
                  end;
                 // XL.ActiveWorkbook.SaveAs(tmpdir+'\print'+parsedatetime('%D.%M.%Y-%H-%T-%S')+'.xls');
-                XL.Visible := true;
+
                 // XL.worksheets.Printout;
                 //XL.Quit;
                 //XL := Unassigned;
         end
         else
                 ShowMessage('Запрос не открыт!');
-
 end;
 
 procedure TFMain.Button25Click(Sender: TObject);
 var
         XL, xlw: Variant;
         templatedir, SQL, s: string;
-        i, j: integer;
+        i, j,r,c: integer;
 begin
-        if DBGrid13.DataSource.DataSet.Active then
+r:=5;
+c:=2;
+sql:=' select p.name,o.dtend,c.num from people p, oborud o, place c WHERE ';
+sql:=sql+'c.idpers=p.id and c.tip=1 and o.id=c.idoborud and o.name='+Quotedstr(ComboBox8.Text);
+sql:=sql+' union  select p.name,o.dtend,c.num from sklad p, oborud o, place c WHERE ';
+sql:=sql+'c.idpers=p.id and c.tip=0 and o.id=c.idoborud and o.name='+Quotedstr(ComboBox8.Text);
+
+
+DataModule1.QRep.SQL.Clear;
+DataModule1.QRep.Close;
+        DataModule1.QRep.SQL.Add(sql);
+        DataModule1.QRep.Open();
+        if DBGrid14.DataSource.DataSet.Active then
         begin
                 XL := CreateOLEObject('Excel.Application');
                 XL.DisplayAlerts := False;
                 XL.Visible := true;
-                XL.WorkBooks.Add;
-                //XL.WorkBooks.Open(MyDir + '\akt.xls');
+                //XL.WorkBooks.Add;
+                XL.WorkBooks.Open(MyDir + 'sklad.xlsx');
+                XL.Visible := true;
                 //xlw := XL.Workbooks.Add(extractfilepath(paramstr(0)) +
                 //  'tpl.xlsx');
                 // https://delphisources.ru/pages/faq/base/excel_work.html
-                for I := 0 to dbgrid13.DataSource.DataSet.RecordCount-1 do
+                for I := 0 to dbgrid14.DataSource.DataSet.RecordCount-1 do
                  begin
-                  for j := 0 to dbgrid13.DataSource.DataSet.FieldCount-1 do
+                  for j := 0 to dbgrid14.DataSource.DataSet.FieldCount-1 do
                    begin
-                    XL.Workbooks[1].WorkSheets[1].Cells[i+1, j+1] := dbgrid13.DataSource.DataSet.Fields[j].AsString;
+                    XL.Workbooks[1].WorkSheets[1].Cells[i+r, j+c] := dbgrid14.DataSource.DataSet.Fields[j].AsString;
 
                    end;
-                   dbgrid13.DataSource.DataSet.Next;
+                   dbgrid14.DataSource.DataSet.Next;
                  end;
                 // XL.ActiveWorkbook.SaveAs(tmpdir+'\print'+parsedatetime('%D.%M.%Y-%H-%T-%S')+'.xls');
-                XL.Visible := true;
+
                 // XL.worksheets.Printout;
                 //XL.Quit;
                 //XL := Unassigned;
         end
         else
                 ShowMessage('Запрос не открыт!');
-
 end;
 
 procedure TFMain.Button2Click(Sender: TObject);
@@ -1038,7 +1068,8 @@ var
         ini: tinifile;
         s: string;
 begin
-        ini := tinifile.Create(extractfilepath(application.ExeName) +
+        mydir:=extractfilepath(paramstr(0));
+        ini := tinifile.Create(mydir +
           'settings.ini');
         Edit12.Text := ini.ReadString('BASE', 'path', '');
         ini.Free;

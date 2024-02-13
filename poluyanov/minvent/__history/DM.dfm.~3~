@@ -1,0 +1,153 @@
+object DataModule1: TDataModule1
+  Height = 641
+  Width = 762
+  object FDC: TFDConnection
+    Params.Strings = (
+      'DriverID=SQLite'
+      'Database=S:\MINVENT\minvent.sqlite'
+      'LockingMode=Normal')
+    ConnectedStoredUsage = []
+    LoginPrompt = False
+    Left = 8
+    Top = 8
+  end
+  object Qtemp: TFDQuery
+    Connection = FDC
+    Left = 400
+    Top = 11
+  end
+  object DataSource1: TDataSource
+    DataSet = FDTable1
+    Left = 188
+    Top = 4
+  end
+  object DataSource2: TDataSource
+    DataSet = FDTable2
+    Left = 188
+    Top = 48
+  end
+  object DataSource3: TDataSource
+    DataSet = FDTable3
+    Left = 188
+    Top = 96
+  end
+  object DataSource4: TDataSource
+    DataSet = FDTable4
+    Left = 192
+    Top = 148
+  end
+  object DataSource5: TDataSource
+    DataSet = FDTable5
+    Left = 188
+    Top = 196
+  end
+  object DataSource6: TDataSource
+    DataSet = FDTable6
+    Left = 184
+    Top = 252
+  end
+  object FDTable1: TFDTable
+    IndexFieldNames = 'id'
+    Connection = FDC
+    ResourceOptions.AssignedValues = [rvEscapeExpand]
+    TableName = 'org'
+    Left = 104
+    Top = 4
+  end
+  object FDTable2: TFDTable
+    IndexFieldNames = 'idorg'
+    MasterSource = DataSource1
+    MasterFields = 'id'
+    Connection = FDC
+    ResourceOptions.AssignedValues = [rvEscapeExpand]
+    TableName = 'otdel'
+    Left = 104
+    Top = 56
+  end
+  object FDTable3: TFDTable
+    IndexFieldNames = 'idotdel'
+    MasterSource = DataSource2
+    MasterFields = 'id'
+    DetailFields = 'iddolg'
+    Connection = FDC
+    FetchOptions.AssignedValues = [evDetailCascade]
+    FetchOptions.DetailCascade = True
+    ResourceOptions.AssignedValues = [rvEscapeExpand]
+    TableName = 'people'
+    Left = 100
+    Top = 100
+  end
+  object FDTable4: TFDTable
+    AfterPost = FDTable4AfterPost
+    IndexFieldNames = 'id'
+    Connection = FDC
+    ResourceOptions.AssignedValues = [rvEscapeExpand]
+    TableName = 'dolg'
+    Left = 100
+    Top = 148
+  end
+  object FDTable5: TFDTable
+    IndexFieldNames = 'id'
+    Connection = FDC
+    ResourceOptions.AssignedValues = [rvEscapeExpand]
+    TableName = 'sklad'
+    Left = 100
+    Top = 196
+  end
+  object FDTable6: TFDTable
+    IndexFieldNames = 'id'
+    Connection = FDC
+    ResourceOptions.AssignedValues = [rvEscapeExpand]
+    TableName = 'oborud'
+    Left = 100
+    Top = 252
+  end
+  object QList: TFDQuery
+    Connection = FDC
+    SQL.Strings = (
+      
+        'select p.id id, o.name ob,l.name name,p.num num, p.idoborud idob' +
+        'orud '
+      'from place p, sklad l, oborud o'
+      'where p.idpers=l.id and p.tip=0 and o.id=p.idoborud')
+    Left = 96
+    Top = 336
+  end
+  object DList: TDataSource
+    DataSet = QList
+    Left = 156
+    Top = 336
+  end
+  object QLists: TFDQuery
+    Connection = FDC
+    SQL.Strings = (
+      ''
+      
+        'select p.id id, o.name ob,l.name name,p.num num, p.idoborud idob' +
+        'orud '
+      'from place p, people l, oborud o'
+      'where p.idpers=l.id and p.tip=1 and o.id=p.idoborud')
+    Left = 96
+    Top = 384
+  end
+  object DListS: TDataSource
+    DataSet = QLists
+    Left = 156
+    Top = 384
+  end
+  object QRep: TFDQuery
+    Connection = FDC
+    Left = 400
+    Top = 72
+  end
+  object DSrep: TDataSource
+    DataSet = QRep
+    Left = 444
+    Top = 72
+  end
+  object QDel: TFDQuery
+    Connection = FDC
+    Left = 476
+    Top = 240
+  end
+end
