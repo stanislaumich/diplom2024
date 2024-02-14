@@ -577,7 +577,7 @@ var
         templatedir, SQL, s: string;
         i, j,r,c: integer;
 begin
-r:=5;
+r:=10;
 c:=2;
 sql:='select o.name,o.dtend,c.num from people p, oborud o, place c ';
 sql:=sql+'WHERE c.idpers=p.id and c.tip=1 and o.id=c.idoborud and p.name='+Quotedstr(ComboBox6.Text);
@@ -596,10 +596,19 @@ DataModule1.QRep.Close;
                 //xlw := XL.Workbooks.Add(extractfilepath(paramstr(0)) +
                 //  'tpl.xlsx');
                 // https://delphisources.ru/pages/faq/base/excel_work.html
+                XL.Workbooks[1].WorkSheets[1].Cells[5, 5] := Combobox6.Text;
+                DataModule1.QTemp.Close;
+                DataModule1.QTemp.SQL.Clear;
+                DataModule1.QTemp.SQL.Add('select d.name name from dolg d, people p where p.iddolg=d.id and p.name='+Quotedstr(Combobox6.Text));
+                DataModule1.QTemp.Open();
+                Memo1.Lines.add(DataModule1.QTemp.FieldByName('Name').AsString);
+                XL.Workbooks[1].WorkSheets[1].Cells[3, 5] := DataModule1.QTemp.FieldByName('Name').AsString;
                 for I := 0 to dbgrid14.DataSource.DataSet.RecordCount-1 do
                  begin
+                 XL.Workbooks[1].WorkSheets[1].Cells[i+r, 1]:=inttostr(i+1);
                   for j := 0 to dbgrid14.DataSource.DataSet.FieldCount-1 do
                    begin
+
                     XL.Workbooks[1].WorkSheets[1].Cells[i+r, j+c] := dbgrid14.DataSource.DataSet.Fields[j].AsString;
 
                    end;
@@ -641,6 +650,7 @@ DataModule1.QRep.Close;
                 //xlw := XL.Workbooks.Add(extractfilepath(paramstr(0)) +
                 //  'tpl.xlsx');
                 // https://delphisources.ru/pages/faq/base/excel_work.html
+                XL.Workbooks[1].WorkSheets[1].Cells[1, 3] := Combobox7.Text;
                 for I := 0 to dbgrid14.DataSource.DataSet.RecordCount-1 do
                  begin
                   for j := 0 to dbgrid14.DataSource.DataSet.FieldCount-1 do
