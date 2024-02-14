@@ -596,6 +596,7 @@ DataModule1.QRep.Close;
                 //xlw := XL.Workbooks.Add(extractfilepath(paramstr(0)) +
                 //  'tpl.xlsx');
                 // https://delphisources.ru/pages/faq/base/excel_work.html
+                XL.Workbooks[1].WorkSheets[1].Cells[1, 3] := Combobox6.Text;
                 for I := 0 to dbgrid14.DataSource.DataSet.RecordCount-1 do
                  begin
                   for j := 0 to dbgrid14.DataSource.DataSet.FieldCount-1 do
@@ -641,6 +642,7 @@ DataModule1.QRep.Close;
                 //xlw := XL.Workbooks.Add(extractfilepath(paramstr(0)) +
                 //  'tpl.xlsx');
                 // https://delphisources.ru/pages/faq/base/excel_work.html
+                XL.Workbooks[1].WorkSheets[1].Cells[1, 3] := Combobox7.Text;
                 for I := 0 to dbgrid14.DataSource.DataSet.RecordCount-1 do
                  begin
                   for j := 0 to dbgrid14.DataSource.DataSet.FieldCount-1 do
@@ -684,11 +686,12 @@ DataModule1.QRep.Close;
                 XL.DisplayAlerts := False;
                 XL.Visible := true;
                 //XL.WorkBooks.Add;
-                XL.WorkBooks.Open(MyDir + 'sklad.xlsx');
+                XL.WorkBooks.Open(MyDir + 'mater.xlsx');
                 XL.Visible := true;
                 //xlw := XL.Workbooks.Add(extractfilepath(paramstr(0)) +
                 //  'tpl.xlsx');
                 // https://delphisources.ru/pages/faq/base/excel_work.html
+                XL.Workbooks[1].WorkSheets[1].Cells[1, 3] := Combobox8.Text;
                 for I := 0 to dbgrid14.DataSource.DataSet.RecordCount-1 do
                  begin
                   for j := 0 to dbgrid14.DataSource.DataSet.FieldCount-1 do
