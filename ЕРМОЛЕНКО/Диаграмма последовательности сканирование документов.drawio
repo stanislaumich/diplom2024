@@ -1,0 +1,43 @@
+<mxfile host="Electron" modified="2024-04-24T20:01:01.754Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.1.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="aicxofOq1JOHd0icaeYA" version="23.1.5" type="device">
+  <diagram name="Page-1" id="13e1069c-82ec-6db2-03f1-153e76fe0fe0">
+    <mxGraphModel dx="1178" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="op0lxmQw7sveor1kVEQ--1" value="Основное окно" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" parent="1" vertex="1">
+          <mxGeometry x="370" y="110" width="140" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="op0lxmQw7sveor1kVEQ--2" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" parent="op0lxmQw7sveor1kVEQ--1" vertex="1">
+          <mxGeometry x="65" y="100" width="10" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="op0lxmQw7sveor1kVEQ--5" value="Основное окно " style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" parent="1" vertex="1">
+          <mxGeometry x="120" y="110" width="110" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="op0lxmQw7sveor1kVEQ--6" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" parent="op0lxmQw7sveor1kVEQ--5" vertex="1">
+          <mxGeometry x="50" y="100" width="10" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="op0lxmQw7sveor1kVEQ--7" value="Нажать кнопку сканирования&lt;br&gt;документ-камеры или сканера" style="html=1;verticalAlign=bottom;endArrow=block;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;edgeStyle=elbowEdgeStyle;elbow=vertical;" parent="1" target="op0lxmQw7sveor1kVEQ--1" edge="1">
+          <mxGeometry x="0.0019" y="20" relative="1" as="geometry">
+            <mxPoint x="180" y="220" as="sourcePoint" />
+            <mxPoint x="315" y="220" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="250" y="220" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="op0lxmQw7sveor1kVEQ--11" value="&lt;div&gt;Убедиться в записи&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=block;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;elbow=vertical;edgeStyle=orthogonalEdgeStyle;curved=1;exitX=1.4;exitY=0.465;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" target="op0lxmQw7sveor1kVEQ--5" edge="1" source="op0lxmQw7sveor1kVEQ--2">
+          <mxGeometry x="-0.6031" y="30" relative="1" as="geometry">
+            <mxPoint x="660" y="290" as="sourcePoint" />
+            <mxPoint x="990" y="350" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="570" y="289" />
+              <mxPoint x="570" y="330" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

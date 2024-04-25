@@ -1,0 +1,73 @@
+<mxfile host="Electron" modified="2024-04-24T18:39:47.923Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.1.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="4Oy5mKGZDyDEkmCVUZAU" version="23.1.5" type="device">
+  <diagram name="Page-1" id="13e1069c-82ec-6db2-03f1-153e76fe0fe0">
+    <mxGraphModel dx="1178" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Rh49Ad4mSN5Xsd5nTRqY-1" value="Вкладка &quot;Настройки&quot;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="380" y="120" width="140" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="Rh49Ad4mSN5Xsd5nTRqY-2" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" vertex="1" parent="Rh49Ad4mSN5Xsd5nTRqY-1">
+          <mxGeometry x="65" y="100" width="10" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="Rh49Ad4mSN5Xsd5nTRqY-3" value="Вкладка &quot;Настройки&quot;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="670" y="120" width="130" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="Rh49Ad4mSN5Xsd5nTRqY-4" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" vertex="1" parent="Rh49Ad4mSN5Xsd5nTRqY-3">
+          <mxGeometry x="60" y="120" width="10" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="Rh49Ad4mSN5Xsd5nTRqY-5" value="&lt;div&gt;Подтверждение действия&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=block;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;elbow=vertical;edgeStyle=orthogonalEdgeStyle;curved=1;exitX=0.8;exitY=0.4;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="Rh49Ad4mSN5Xsd5nTRqY-3" source="Rh49Ad4mSN5Xsd5nTRqY-4" target="Rh49Ad4mSN5Xsd5nTRqY-4">
+          <mxGeometry x="-0.3043" y="54" relative="1" as="geometry">
+            <mxPoint y="180" as="sourcePoint" />
+            <mxPoint x="330" y="240" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="68" y="170" />
+              <mxPoint x="110" y="170" />
+              <mxPoint x="110" y="220" />
+            </Array>
+            <mxPoint x="-4" y="-20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Rh49Ad4mSN5Xsd5nTRqY-6" value="Основное окно " style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="130" y="120" width="110" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="Rh49Ad4mSN5Xsd5nTRqY-7" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" vertex="1" parent="Rh49Ad4mSN5Xsd5nTRqY-6">
+          <mxGeometry x="50" y="100" width="10" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="Rh49Ad4mSN5Xsd5nTRqY-8" value="Открыть вкладку &quot;Настройки&quot;" style="html=1;verticalAlign=bottom;endArrow=block;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;edgeStyle=elbowEdgeStyle;elbow=vertical;" edge="1" parent="1" target="Rh49Ad4mSN5Xsd5nTRqY-1">
+          <mxGeometry x="0.0019" y="20" relative="1" as="geometry">
+            <mxPoint x="190" y="230" as="sourcePoint" />
+            <mxPoint x="325" y="230" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="260" y="230" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Rh49Ad4mSN5Xsd5nTRqY-9" value="Возврат" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;" edge="1" parent="1" source="Rh49Ad4mSN5Xsd5nTRqY-1">
+          <mxGeometry x="-0.1966" y="-3" relative="1" as="geometry">
+            <mxPoint x="190" y="389.9999999999999" as="targetPoint" />
+            <mxPoint x="410" y="390" as="sourcePoint" />
+            <Array as="points" />
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Rh49Ad4mSN5Xsd5nTRqY-10" value="Возврат" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;" edge="1" parent="1" source="Rh49Ad4mSN5Xsd5nTRqY-3">
+          <mxGeometry x="-0.1966" y="-3" relative="1" as="geometry">
+            <mxPoint x="460" y="360" as="targetPoint" />
+            <mxPoint x="630" y="360" as="sourcePoint" />
+            <Array as="points" />
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Rh49Ad4mSN5Xsd5nTRqY-11" value="Ввод данных настроек приложения" style="html=1;verticalAlign=bottom;endArrow=block;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;edgeStyle=elbowEdgeStyle;elbow=vertical;" edge="1" parent="1" target="Rh49Ad4mSN5Xsd5nTRqY-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="460" y="260" as="sourcePoint" />
+            <Array as="points" />
+            <mxPoint x="625" y="259.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
